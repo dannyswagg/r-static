@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter } from "react-router-dom";
+import Navigation from "./Component/Navigation";
+import Hero from "./Component/Hero";
+import Section from "./Component/Section";
+import Services from "./Component/Section2";
+import Footer from "./Component/Footer/Index.js";
+import Card from "./Component/Card";
+import Sign from "./Component/Sign";
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navigation />
+        <Hero />
+        <Section />
+        <Services />
+        <Card />
+        <Sign />
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
